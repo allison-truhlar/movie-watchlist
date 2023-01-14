@@ -1,0 +1,246 @@
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color:#121212;
+}
+
+/* Header and form -------------------------------------------------------------------------------*/
+
+.app-container{
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-and-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    height: 40%;
+    padding: 2em;
+    background-image: url(https://images.unsplash.com/photo-1628432136678-43ff9be34064?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80);
+    background-color: #4B4B4B;
+    background-blend-mode: multiply;
+    background-position: left 25%;
+    background-size: cover;
+}
+.active-page {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+
+.inactive-page {
+    order: -1;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform 250ms; 
+    background: #6B7280;
+    opacity: 90%;
+    margin-bottom: 1.25em;
+    padding: 0.3em 0.75em;
+    border-radius: 4px;
+}
+
+.inactive-page:hover,
+.inactive-page:focus,
+.add-remove-btn:focus,
+.add-remove-btn:hover{
+    transform: scale(1.1); 
+    opacity: 100%;
+}
+
+.form{
+    position: absolute;
+    bottom: -20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 4em);
+    height: 2.2em;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.blank{
+    opacity: 0%;
+}
+
+.search-input, .search-btn{
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500; 
+}
+
+.search-input{
+    width: 60%;
+    height: 80%;
+    border: none;
+    background-color: #FFFFFF;
+    color: #6B7280;
+}
+
+.search-btn{
+    margin-left: auto;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-left: 1px solid #D1D5DB;
+    border-radius: 0px 6px 6px 0px;
+    background: #F9FAFB;
+    color: #374151;
+}
+
+.fa-magnifying-glass{
+    color: #9CA3AF;
+    background: #FFFFFF;
+    border-radius: 6px 0px 0px 6px;
+    padding: 0 0.5em;
+}
+
+/* Movie display section ------------------------------------------------------------------------*/
+
+.movie-list-section,
+.movie-header, 
+.movie-subheader,
+.poster-container{
+    display: flex;
+    align-items: center;   
+}
+
+.movie-list-section{
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    background-color: #FFFFFF;
+    
+}
+
+.search-result{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+    padding: 20px 0 20px 0; 
+    border-bottom: 1.5px solid #E5E7EB;
+}
+
+.poster-container{
+    width: 30%;
+    text-align: center;
+}
+
+.poster{
+    width: 100%;
+}
+
+.description-container{
+    width: 65%;
+}
+
+.btn-container,
+.add-remove-btn{
+    display: flex;
+    align-items: center;
+}
+
+.add-remove-btn{
+    border: none;
+    background: #111827;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px; 
+    justify-content: center;
+    margin-right: 5px;
+    transform: scale(1);  
+}
+
+.add-remove-btn:hover,
+.add-remove-btn:focus{
+    background: darkred;
+}
+
+.placeholder-container{
+    text-align: center;
+    max-width: 375px;
+}
+
+.fa-film{
+    font-size: 6em;
+    color: #DFDDDD;
+}
+
+.placeholder-text{
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #DFDDDD;
+}
+
+.movie-title,
+.movie-rating,
+.movie-info,
+.add-btn-placeholder-text{
+    margin: 0;
+}
+
+.movie-title{   
+    padding: 0 0rem 1.25rem 0;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.movie-rating,
+.movie-info{
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.movie-rating{
+    padding: 0 1rem 1rem 0 ;
+    
+}
+
+.movie-info{
+    padding-right: 1rem;
+}
+
+.fa-star{
+    padding: 0 0.25rem 1.25rem 1rem;
+    color: #FEC654;
+}
+
+.movie-plot{
+    font-size: 0.85rem;
+    line-height: 20px;
+    color: #6B7280;
+    letter-spacing: 0.25px;
+    padding-top: 1rem;
+}
+
+.add-btn-placeholder-text{
+    padding-left:0.25em;
+    font-weight: 700;
+    font-size: 14px;
+    color: #363636;
+    text-decoration: none;
+    transform: scale(1);
+}
+
+.add-btn-placeholder-text:hover,
+.add-btn-placeholder-text:focus{
+    color: darkred;
+    transform: scale(1.05);
+}

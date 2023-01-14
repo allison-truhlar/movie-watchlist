@@ -1,0 +1,27 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="app-container">
+            <div class="header-and-form-container">
+                <h1 class="active-page">My Watchlist</h1>
+                <a href="index.html" class="inactive-page">Search for movies</a>
+                <div class="form blank"></div>
+            </div>
+            <section class="movie-list-section" id="watchlist-section">
+                <!-- When populated, watchlist goes here. Otherwise, the placeholder text below will display. -->
+                <p class="placeholder-text">Your watchlist is looking a little empty...</p>
+                <div class="btn-container">
+                    <a class="add-remove-btn" href="index.html">+</a>
+                    <a class="add-btn-placeholder-text" href="index.html">Let's add some movies!</a>
+                </div>
+            </section>
+        </div>
+        <script type="module" src="/js/watchlist.js"></script>
+    </body>
+</html>
