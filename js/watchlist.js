@@ -26,10 +26,9 @@ watchlistSection.addEventListener("click", e => {
                 watchlistSection.style.display="flex"
                 watchlistSection.innerHTML = 
                 `<p class="placeholder-text">Your watchlist is looking a little empty...</p>
-                <div class="btn-container">
-                    <a class="add-remove-btn" href="index.html">+</a>
-                    <p class="add-btn-placeholder-text">Let's add some movies!</p>
-                </div>`
+                <a class="add-btn bold" href="index.html">
+                    <i class="fa-solid fa-circle-plus"></i> Let's add some movies!
+                </a>`
                 localStorage.clear()
             }  
         }

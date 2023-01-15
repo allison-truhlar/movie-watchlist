@@ -151,17 +151,22 @@ html, body {
 }
 
 .add-btn{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1rem;
     color: #363636;
     text-decoration: none;
-    transform: scale(1);
+    border: none;
+    background: none; 
 }
 
 .add-btn:hover,
 .add-btn:focus{
     color: darkred;
     cursor: pointer;
+}
+
+.bold{
+    font-weight: 700;
 }
 
 .placeholder-container{
@@ -176,7 +181,7 @@ html, body {
 
 .placeholder-text{
     margin-top: 0.5rem;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.25rem;
     color: #DFDDDD;
 }
@@ -197,7 +202,7 @@ html, body {
 .movie-rating,
 .movie-info{
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
 .movie-rating{

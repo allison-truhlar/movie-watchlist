@@ -1,4 +1,3 @@
-- Fix centering on "+" buttons
 - Fix display of movies after search (white background doesn't extend)
 - Add media queries
 - Add error catching to fetch

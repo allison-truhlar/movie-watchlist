@@ -7,9 +7,9 @@ function renderHtml(movieArray, element, addBtn){
     element.style.display = "block"
     element.style.paddingTop = "20px"
     
-    const btnText = 
-        addBtn ? {Symbol: "+", Text: "Watchlist"}
-            : {Symbol: "-", Text: "Remove"}  
+    const btnIcon = 
+        addBtn ? {Symbol: `<i class="fa-solid fa-circle-plus"></i>`, Text: "Watchlist"}
+            : {Symbol: `<i class="fa-solid fa-circle-minus"></i>`, Text: "Remove"}  
     
     const html = movieArray.map(movie => {
         const posterImg = 
@@ -29,10 +29,7 @@ function renderHtml(movieArray, element, addBtn){
                         <div class="movie-subheader">
                             <p class="movie-info">${movie.value.Runtime}</p>
                             <p class="movie-info">${movie.value.Genre}</p>
-                                <div class="btn-container">
-                                    <button class="add-remove-btn" data-id=${movie.value.imdbID}>${btnText.Symbol}</button>
-                                    <p class="movie-info">${btnText.Text}</p>
-                                </div>
+                            <button data-id=${movie.value.imdbID} class="add-btn">${btnIcon.Symbol} ${btnIcon.Text}</button>
                         </div>
                         <div class="movie-plot">${movie.value.Plot}
                         </div>
