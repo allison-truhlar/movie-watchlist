@@ -1,5 +1,5 @@
 *, *::before, *::after {
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 html, body {
@@ -46,7 +46,7 @@ html, body {
     text-shadow: 1px 1px 1px black;
     text-decoration: none;
     transform: scale(1);
-    transition: transform 250ms; 
+    transition: transform 250ms;
     background: #6B7280;
     opacity: 90%;
     margin-bottom: 1.25em;
@@ -58,7 +58,7 @@ html, body {
 .inactive-page:focus,
 .add-remove-btn:focus,
 .add-remove-btn:hover{
-    transform: scale(1.1); 
+    transform: scale(1.1);
     opacity: 100%;
 }
 
@@ -81,7 +81,7 @@ html, body {
 .search-input, .search-btn{
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 .search-input{
@@ -112,27 +112,28 @@ html, body {
 /* Movie display section ------------------------------------------------------------------------*/
 
 .movie-list-section,
-.movie-header, 
+.movie-header,
 .movie-subheader,
 .poster-container{
     display: flex;
-    align-items: center;   
+    align-items: center;
 }
 
 .movie-list-section{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 60%;
+    min-height: 60%;
+    /* height: 60%; */
     background-color: #FFFFFF;
-    
+
 }
 
 .search-result{
     display: flex;
     justify-content: space-between;
     margin: 0 40px;
-    padding: 20px 0 20px 0; 
+    padding: 20px 0 20px 0;
     border-bottom: 1.5px solid #E5E7EB;
 }
 
@@ -149,27 +150,18 @@ html, body {
     width: 65%;
 }
 
-.btn-container,
-.add-remove-btn{
-    display: flex;
-    align-items: center;
+.add-btn{
+    font-weight: 700;
+    font-size: 1rem;
+    color: #363636;
+    text-decoration: none;
+    transform: scale(1);
 }
 
-.add-remove-btn{
-    border: none;
-    background: #111827;
-    color: #FFFFFF;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px; 
-    justify-content: center;
-    margin-right: 5px;
-    transform: scale(1);  
-}
-
-.add-remove-btn:hover,
-.add-remove-btn:focus{
-    background: darkred;
+.add-btn:hover,
+.add-btn:focus{
+    color: darkred;
+    cursor: pointer;
 }
 
 .placeholder-container{
@@ -196,7 +188,7 @@ html, body {
     margin: 0;
 }
 
-.movie-title{   
+.movie-title{
     padding: 0 0rem 1.25rem 0;
     font-weight: 500;
     font-size: 1.25rem;
@@ -210,7 +202,7 @@ html, body {
 
 .movie-rating{
     padding: 0 1rem 1rem 0 ;
-    
+
 }
 
 .movie-info{
@@ -228,19 +220,4 @@ html, body {
     color: #6B7280;
     letter-spacing: 0.25px;
     padding-top: 1rem;
-}
-
-.add-btn-placeholder-text{
-    padding-left:0.25em;
-    font-weight: 700;
-    font-size: 14px;
-    color: #363636;
-    text-decoration: none;
-    transform: scale(1);
-}
-
-.add-btn-placeholder-text:hover,
-.add-btn-placeholder-text:focus{
-    color: darkred;
-    transform: scale(1.05);
 }
