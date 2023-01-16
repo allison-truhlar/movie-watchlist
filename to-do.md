@@ -1,3 +1,2 @@
-- Fix display of movies after search (causes horizontal scrolling)
 - Add media queries
 - Add error catching to fetch
