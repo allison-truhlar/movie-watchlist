@@ -23,8 +23,10 @@ function renderHtml(movieArray, element, addBtn){
                     <div class="description-container">
                         <div class="movie-header">
                             <p class="movie-title">${movie.value.Title}</p>
-                            <i class="fa-solid fa-star"></i>
-                            <p class="movie-rating">${movie.value.imdbRating}</p>
+                            <p class="movie-rating">
+                                <i class="fa-solid fa-star"></i>
+                                ${movie.value.imdbRating}
+                            </p>
                         </div>
                         <div class="movie-subheader">
                             <p class="movie-info">${movie.value.Runtime}</p>

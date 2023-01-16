@@ -1,3 +1,3 @@
-- Fix display of movies after search (white background doesn't extend)
+- Fix display of movies after search (causes horizontal scrolling)
 - Add media queries
 - Add error catching to fetch

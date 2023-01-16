@@ -14,17 +14,19 @@ html, body {
 .app-container{
     margin: 0 auto;
     width: 100vw;
+    max-width:100%;
     height: 100vh;
 }
 
 .header-and-form-container{
+    width: 100%;
+    height: 40%;
+    padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     position: relative;
-    height: 40%;
-    padding: 2em;
     background-image: url(https://images.unsplash.com/photo-1628432136678-43ff9be34064?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80);
     background-color: #4B4B4B;
     background-blend-mode: multiply;
@@ -63,12 +65,13 @@ html, body {
 }
 
 .form{
+    width: 90%;
     position: absolute;
-    bottom: -20px;
+    align-self: center;
+    bottom: -2.25em;
     display: flex;
     align-items: center;
-    width: calc(100% - 4em);
-    height: 2.2em;
+    height: 2.5em;
     border: 1px solid #D1D5DB;
     border-radius: 6px;
     background-color: #FFFFFF;
@@ -85,7 +88,7 @@ html, body {
 }
 
 .search-input{
-    width: 60%;
+    width: 80%;
     height: 80%;
     border: none;
     background-color: #FFFFFF;
@@ -124,7 +127,6 @@ html, body {
     justify-content: center;
     width: 100%;
     min-height: 60%;
-    /* height: 60%; */
     background-color: #FFFFFF;
 
 }
@@ -132,8 +134,8 @@ html, body {
 .search-result{
     display: flex;
     justify-content: space-between;
-    margin: 0 40px;
-    padding: 20px 0 20px 0;
+    width: 100%;
+    padding: 20px 40px;
     border-bottom: 1.5px solid #E5E7EB;
 }
 
@@ -193,8 +195,13 @@ html, body {
     margin: 0;
 }
 
+.movie-header,
+.movie-subheader{
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+}
+
 .movie-title{
-    padding: 0 0rem 1.25rem 0;
     font-weight: 500;
     font-size: 1.25rem;
 }
@@ -203,19 +210,10 @@ html, body {
 .movie-info{
     font-weight: 400;
     font-size: 0.8rem;
-}
-
-.movie-rating{
-    padding: 0 1rem 1rem 0 ;
-
-}
-
-.movie-info{
-    padding-right: 1rem;
+    padding: 0;
 }
 
 .fa-star{
-    padding: 0 0.25rem 1.25rem 1rem;
     color: #FEC654;
 }
 
@@ -224,5 +222,4 @@ html, body {
     line-height: 20px;
     color: #6B7280;
     letter-spacing: 0.25px;
-    padding-top: 1rem;
 }
