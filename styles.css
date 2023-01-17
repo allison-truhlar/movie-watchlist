@@ -71,6 +71,7 @@ html, body {
     bottom: -2.25em;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     height: 2.5em;
     border: 1px solid #D1D5DB;
     border-radius: 6px;
@@ -88,15 +89,14 @@ html, body {
 }
 
 .search-input{
-    width: 80%;
     height: 80%;
+    width: 70%;
     border: none;
     background-color: #FFFFFF;
     color: #6B7280;
 }
 
 .search-btn{
-    margin-left: auto;
     padding: 0.75em 1.5em;
     border: none;
     border-left: 1px solid #D1D5DB;
@@ -106,10 +106,11 @@ html, body {
 }
 
 .fa-magnifying-glass{
+    padding-left: 2%;
+    width: 10%;
     color: #9CA3AF;
     background: #FFFFFF;
     border-radius: 6px 0px 0px 6px;
-    padding: 0 0.5em;
 }
 
 /* Movie display section ------------------------------------------------------------------------*/
