@@ -1,2 +1,3 @@
 - Add media queries
 - Add error catching to fetch
+- Improve UX by leaving a movie on the list if added to watchlist, but changing (+) to (check)
