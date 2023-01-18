@@ -68,8 +68,9 @@ html, body {
     width: 90%;
     max-width: 550px;
     position: absolute;
-    align-self: center;
     bottom: -2.25em;
+    left: 50%; /* move left edge to center */
+    transform: translate(-50%,0%); /* moves the left edge back to the left by half the size of the element*/
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -231,9 +232,11 @@ html, body {
     .header-and-form-container {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
     .inactive-page {
         order: 0;
     }
+}
 
     
