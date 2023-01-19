@@ -72,7 +72,7 @@ html, body {
     transform: translate(-50%,0%); /* moves the left edge back to the left by half the size of the element*/
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 2.5em;
     border: 1px solid #D1D5DB;
     border-radius: 6px;
@@ -83,6 +83,12 @@ html, body {
     opacity: 0%;
 }
 
+.form-icon-input{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
 .search-input, .search-btn{
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
@@ -90,15 +96,15 @@ html, body {
 }
 
 .search-input{
-    height: 80%;
-    width: 70%;
+    flex-grow: 1;
     border: none;
     background-color: #FFFFFF;
     color: #6B7280;
 }
 
 .search-btn{
-    padding: 0.75em 1.5em;
+    width: 20%;
+    padding-block: 0.75em;
     border: none;
     border-left: 1px solid #D1D5DB;
     border-radius: 0px 6px 6px 0px;
@@ -107,8 +113,7 @@ html, body {
 }
 
 .fa-magnifying-glass{
-    padding-left: 2%;
-    width: 10%;
+    padding: 0 1em 0 1em;
     color: #9CA3AF;
     background: #FFFFFF;
     border-radius: 6px 0px 0px 6px;
