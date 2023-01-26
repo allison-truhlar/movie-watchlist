@@ -144,7 +144,6 @@ html, body {
     justify-content: space-between;
     width: 100%;
     padding: 1.25em 1.5em;
-    border: solid 1px red;
     border-bottom: 1.5px solid #E5E7EB;
 }
 
@@ -271,7 +270,6 @@ html, body {
     }
     .search-result{
         padding: 1.25em 4em;
-        border: solid 1px purple;
     }
     .poster-container{
         width: 20%;
