@@ -165,7 +165,9 @@ html, body {
     color: #363636;
     text-decoration: none;
     border: none;
-    background: none; 
+    background: none;
+    min-width: 40%; 
+    justify-self: auto;
 }
 
 .add-btn:hover,
@@ -204,8 +206,15 @@ html, body {
 
 .movie-header,
 .movie-subheader{
-    gap: 0.8rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-subheader-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .movie-title{
@@ -220,11 +229,16 @@ html, body {
     padding: 0;
 }
 
+.movie-rating{
+    min-width: 15%;
+}
+
 .fa-star{
     color: #FEC654;
 }
 
 .movie-plot{
+    margin: 0;
     font-size: 0.85rem;
     line-height: 20px;
     color: #6B7280;
