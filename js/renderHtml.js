@@ -29,12 +29,13 @@ function renderHtml(movieArray, element, addBtn){
                             </p>
                         </div>
                         <div class="movie-subheader">
-                            <p class="movie-info">${movie.value.Runtime}</p>
-                            <p class="movie-info">${movie.value.Genre}</p>
+                            <div class="movie-subheader-left">
+                                <p class="movie-info">${movie.value.Runtime}</p>
+                                <p class="movie-info">${movie.value.Genre}</p>
+                            </div>
                             <button data-id=${movie.value.imdbID} class="add-btn">${btnIcon.Symbol} ${btnIcon.Text}</button>
                         </div>
-                        <div class="movie-plot">${movie.value.Plot}
-                        </div>
+                        <p class="movie-plot">${movie.value.Plot}</p>
                     </div>
                 </div>`
          
