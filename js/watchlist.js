@@ -9,10 +9,10 @@ const watchlistPlaceholder = document.getElementById("watchlist-placeholder")
 // If the watchlist still has movies in the array, render the movies and save the array without the target movie to local storage.
 // If the watchlist is now empty, render the placeholder text and clear local storage.
 watchlistSection.addEventListener("click", e => {
-        if(e.target.dataset.id){
+        if(e.target.dataset.imdbId){
             
             const targetMovie = myWatchlist.filter(movie => {
-                return movie.value.imdbID === e.target.dataset.id
+                return movie.value.imdbID === e.target.dataset.imdbId
             })[0]
             
             const targetIndex = myWatchlist.indexOf(targetMovie)

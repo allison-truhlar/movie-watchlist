@@ -33,7 +33,7 @@ function renderHtml(movieArray, element, addBtn){
                                 <p class="movie-info">${movie.value.Runtime}</p>
                                 <p class="movie-info">${movie.value.Genre}</p>
                             </div>
-                            <button data-id=${movie.value.imdbID} class="add-btn">${btnIcon.Symbol} ${btnIcon.Text}</button>
+                            <button data-imdb-id=${movie.value.imdbID} class="add-btn">${btnIcon.Symbol} ${btnIcon.Text}</button>
                         </div>
                         <p class="movie-plot">${movie.value.Plot}</p>
                     </div>
