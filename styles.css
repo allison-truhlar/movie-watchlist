@@ -170,7 +170,6 @@ html, body {
     min-width: 40%; 
     padding: 0;
     text-align: center;
-    border: 1px red solid;
 }
 
 .add-btn:hover,
@@ -248,8 +247,8 @@ html, body {
 
 .movie-plot{
     margin: 0;
-    font-size: 0.85rem;
-    line-height: 20px;
+    font-size: 0.8rem;
+    line-height: 1.3;
     color: #6B7280;
     letter-spacing: 0.25px;
 }
@@ -268,19 +267,36 @@ html, body {
 
 @media (min-width: 768px) {
     .header-and-form-container{
-        padding: 0 4em;
+        padding: 0 6em;
     }
     .inactive-page{
         font-size: 1rem;
     }
     .search-result{
-        padding: 1.25em 4em;
+        padding: 2em 6em;
     }
     .poster-container{
         width: 20%;
     }
     .description-container{
         width: 75%;
+    }
+    .movie-header, 
+    .movie-subheader{
+        padding-bottom: 0.5rem;
+    }
+    .movie-title{
+        font-size: 1.4rem;
+    }
+    .movie-rating,
+    .movie-info{
+        font-size: 0.9rem;
+    }
+    .movie-plot{
+        font-size: 1em;
+    }
+    .add-btn{
+        font-size: 1.1rem;
     }
 }
 
