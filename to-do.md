@@ -1,4 +1,3 @@
-- Add media queries
-    - Increase margin around movie description items at horizontal view
 - Add error catching to fetch
 - Improve UX by leaving a movie on the list if added to watchlist, but changing (+) to (check)
+- Check accessibility - alt text for photos, contrast
