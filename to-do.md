@@ -1,5 +1,4 @@
 - Add media queries
     - Increase margin around movie description items at horizontal view
-- Fix centering of add button on empty watchlist
 - Add error catching to fetch
 - Improve UX by leaving a movie on the list if added to watchlist, but changing (+) to (check)
