@@ -33,21 +33,27 @@ searchBtn.addEventListener("click", e =>{
         })
 })
 
-// On "add" click, push the target movie to the watchlist array, and store in local storage
-// Render the search results with the target movie removed
+// On "add" click, identify target movie. Check if part of watchlist array. 
+// If not, add to the watchlist array and store in local storage. Change "+" to "check" for the watchlist button for that movie.
+
 searchResultSection.addEventListener("click", e => {
-        if(e.target.dataset.id){
+        if(e.target.dataset.imdbId){
             
             const targetMovie = searchResultArray.filter(movie => {
-                return movie.value.imdbID === e.target.dataset.id
+                return movie.value.imdbID === e.target.dataset.imdbId
             })[0]
+
+            if(!myWatchlist.includes(targetMovie)){
+                myWatchlist.push(targetMovie)
+                localStorage.setItem("myWatchlist", JSON.stringify(myWatchlist))
             
-            myWatchlist.push(targetMovie)
-            localStorage.setItem("myWatchlist", JSON.stringify(myWatchlist))
-            
-            const targetIndex = searchResultArray.indexOf(targetMovie)
-            searchResultArray.splice(targetIndex, 1)
-            renderHtml(searchResultArray, searchResultSection, true)
+                const targetButton = document.querySelector('[data-imdb-id =' + e.target.dataset.imdbId +']')
+                targetButton.innerHTML = `<i class="fa-solid fa-circle-check"></i> Watchlist`
+                targetButton.style.color = "darkgreen"
+            }
+            // const targetIndex = searchResultArray.indexOf(targetMovie)
+            // searchResultArray.splice(targetIndex, 1)
+            // renderHtml(searchResultArray, searchResultSection, "plus")
         }
         
 
