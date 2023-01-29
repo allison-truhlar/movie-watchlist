@@ -1,2 +1,2 @@
-- Add error catching to fetch
 - Check accessibility - alt text for photos, contrast
+- Add media query for desktop monitors
