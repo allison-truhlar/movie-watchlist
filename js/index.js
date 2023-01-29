@@ -51,9 +51,7 @@ searchResultSection.addEventListener("click", e => {
                 targetButton.innerHTML = `<i class="fa-solid fa-circle-check"></i> Watchlist`
                 targetButton.style.color = "darkgreen"
             }
-            // const targetIndex = searchResultArray.indexOf(targetMovie)
-            // searchResultArray.splice(targetIndex, 1)
-            // renderHtml(searchResultArray, searchResultSection, "plus")
+
         }
         
 
