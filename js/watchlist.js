@@ -12,7 +12,7 @@ watchlistSection.addEventListener("click", e => {
         if(e.target.dataset.imdbId){
             
             const targetMovie = myWatchlist.filter(movie => {
-                return movie.value.imdbID === e.target.dataset.imdbId
+                return movie.imdbID === e.target.dataset.imdbId
             })[0]
             
             const targetIndex = myWatchlist.indexOf(targetMovie)
