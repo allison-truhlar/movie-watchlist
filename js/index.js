@@ -16,20 +16,16 @@ searchBtn.addEventListener("click", e =>{
     fetch(`https://www.omdbapi.com/?apikey=28fc8eca&s=${searchInput.value}`)
         .then(res => res.json())
         .then(movies => {
-            
-            if(movies.Search){
-                const movieIds = movies.Search.map(movie =>{
+            const movieIds = movies.Search.map(movie =>{
                 return movie.imdbID
-                })
+            })
+            console.log(movieIds)
             searchMovies(movieIds)
-            }
-            
-            else{
-                searchResultSection.style.display = "flex"
-                searchResultSection.innerHTML = `<div class="placeholder-container"><p class="placeholder-text">Unable to find what you're looking for.  Please try another search.</p></div>`
-                searchInput.value=""
-            }
-            
+            })
+        .catch(err => {
+            searchResultSection.style.display = "flex"
+            searchResultSection.innerHTML = `<div class="placeholder-container"><p class="placeholder-text">Unable to find what you're looking for.  Please try another search.</p></div>`
+            searchInput.value=""
         })
 })
 
@@ -40,7 +36,7 @@ searchResultSection.addEventListener("click", e => {
         if(e.target.dataset.imdbId){
             
             const targetMovie = searchResultArray.filter(movie => {
-                return movie.value.imdbID === e.target.dataset.imdbId
+                return movie.imdbID === e.target.dataset.imdbId
             })[0]
 
             if(!myWatchlist.includes(targetMovie)){
@@ -59,12 +55,12 @@ searchResultSection.addEventListener("click", e => {
 
 // Function to fetch movies from a search in the Open Movie Database API
 async function searchMovies(movieIds){
-    
-        searchResultArray = await Promise.allSettled(movieIds.map(async id => {
+        
+        searchResultArray = await Promise.all(movieIds.map(async id => {
             const res = await fetch(`https://www.omdbapi.com/?apikey=28fc8eca&i=${id}`)
             return res.json()      
         }))
-        
+                
         renderHtml(searchResultArray, searchResultSection, true)
                
 }   

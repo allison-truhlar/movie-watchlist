@@ -13,29 +13,29 @@ function renderHtml(movieArray, element, addBtn){
     
     const html = movieArray.map(movie => {
         const posterImg = 
-            movie.value.Poster === "N/A" ? `<p class="placeholder-text placeholder-poster">Poster not found</p>`
-            : `<img src=${movie.value.Poster} class="poster">`
+            movie.Poster === "N/A" ? `<p class="placeholder-text placeholder-poster">Poster not found</p>`
+            : `<img src=${movie.Poster} class="poster">`
         
-       return `<div class="search-result" id=${movie.value.imdbID}>
+       return `<div class="search-result" id=${movie.imdbID}>
                     <div class="poster-container">
                     ${posterImg}
                     </div>
                     <div class="description-container">
                         <div class="movie-header">
-                            <p class="movie-title">${movie.value.Title}</p>
+                            <p class="movie-title">${movie.Title}</p>
                             <p class="movie-rating">
                                 <i class="fa-solid fa-star"></i>
-                                ${movie.value.imdbRating}
+                                ${movie.imdbRating}
                             </p>
                         </div>
                         <div class="movie-subheader">
                             <div class="movie-subheader-left">
-                                <p class="movie-info">${movie.value.Runtime}</p>
-                                <p class="movie-info">${movie.value.Genre}</p>
+                                <p class="movie-info">${movie.Runtime}</p>
+                                <p class="movie-info">${movie.Genre}</p>
                             </div>
-                            <button data-imdb-id=${movie.value.imdbID} class="add-btn">${btnIcon.Symbol} ${btnIcon.Text}</button>
+                            <button data-imdb-id=${movie.imdbID} class="add-btn">${btnIcon.Symbol} ${btnIcon.Text}</button>
                         </div>
-                        <p class="movie-plot">${movie.value.Plot}</p>
+                        <p class="movie-plot">${movie.Plot}</p>
                     </div>
                 </div>`
          
