@@ -1,2 +1,3 @@
 - Check accessibility - alt text for photos, contrast
+    - Fix keyboard accessibility - link to other page not accessible using tabs
 - Add media query for desktop monitors
