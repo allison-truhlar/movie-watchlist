@@ -14,7 +14,7 @@ function renderHtml(movieArray, element, addBtn){
     const html = movieArray.map(movie => {
         const posterImg = 
             movie.Poster === "N/A" ? `<p class="placeholder-text placeholder-poster">Poster not found</p>`
-            : `<img src=${movie.Poster} class="poster">`
+            : `<img src=${movie.Poster} class="poster" alt="Movie poster for ${movie.Title}">`
         
        return `<div class="search-result" id=${movie.imdbID}>
                     <div class="poster-container">

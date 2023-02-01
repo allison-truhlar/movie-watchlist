@@ -60,7 +60,7 @@ async function searchMovies(movieIds){
             const res = await fetch(`https://www.omdbapi.com/?apikey=28fc8eca&i=${id}`)
             return res.json()      
         }))
-                
+         console.log(searchResultArray)      
         renderHtml(searchResultArray, searchResultSection, true)
                
 }   
