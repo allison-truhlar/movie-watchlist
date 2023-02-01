@@ -1,3 +1,3 @@
 - Check accessibility - alt text for photos, contrast
-    - Fix keyboard accessibility - link to other page not accessible using tabs
+    - Need to add focus ability and interactive semantics to search bar, and aria label
 - Add media query for desktop monitors
