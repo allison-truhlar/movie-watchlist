@@ -1,3 +1,2 @@
-- Check accessibility - alt text for photos, contrast
-    - Need to add focus ability and interactive semantics to search bar, and aria label
 - Add media query for desktop monitors
+- Clean up code
