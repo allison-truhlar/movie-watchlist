@@ -9,6 +9,11 @@ html, body {
     background-color:#121212;
 }
 
+body{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 /* Header and form -------------------------------------------------------------------------------*/
 
 .app-container{
