@@ -19,10 +19,9 @@ searchBtn.addEventListener("click", e =>{
             const movieIds = movies.Search.map(movie =>{
                 return movie.imdbID
             })
-            console.log(movieIds)
             searchMovies(movieIds)
             })
-        .catch(err => {
+        .catch(() => {
             searchResultSection.style.display = "flex"
             searchResultSection.innerHTML = `<div class="placeholder-container"><p class="placeholder-text">Unable to find what you're looking for.  Please try another search.</p></div>`
             searchInput.value=""
@@ -31,7 +30,6 @@ searchBtn.addEventListener("click", e =>{
 
 // On "add" click, identify target movie. Check if part of watchlist array. 
 // If not, add to the watchlist array and store in local storage. Change "+" to "check" for the watchlist button for that movie.
-
 searchResultSection.addEventListener("click", e => {
         if(e.target.dataset.imdbId){
             
@@ -47,20 +45,14 @@ searchResultSection.addEventListener("click", e => {
                 targetButton.innerHTML = `<i class="fa-solid fa-circle-check"></i> Watchlist`
                 targetButton.style.color = "darkgreen"
             }
-
         }
-        
-
 })
 
 // Function to fetch movies from a search in the Open Movie Database API
 async function searchMovies(movieIds){
-        
         searchResultArray = await Promise.all(movieIds.map(async id => {
             const res = await fetch(`https://www.omdbapi.com/?apikey=28fc8eca&i=${id}`)
             return res.json()      
-        }))
-         console.log(searchResultArray)      
-        renderHtml(searchResultArray, searchResultSection, true)
-               
+        }))     
+        renderHtml(searchResultArray, searchResultSection, true)       
 }   

@@ -39,7 +39,6 @@ body{
     background-size: cover;
 }
 .active-page {
-    margin: 0;
     font-size: 2.25rem;
     font-weight: 800;
     color: #FFFFFF;
@@ -82,7 +81,7 @@ body{
     background-color: #FFFFFF;
 }
 
-.blank{
+.hide-form{
     opacity: 0%;
 }
 
@@ -317,6 +316,4 @@ body{
     .add-btn{
         font-size: 1.1rem;
     }
-}
-
-    
+}  

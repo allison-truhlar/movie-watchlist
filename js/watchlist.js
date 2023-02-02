@@ -3,7 +3,6 @@ import { renderHtml } from "./renderHtml.js"
 let myWatchlist = 
     (JSON.parse( localStorage.getItem("myWatchlist") )) ? JSON.parse( localStorage.getItem("myWatchlist") ) : []
 const watchlistSection = document.getElementById("watchlist-section")
-const watchlistPlaceholder = document.getElementById("watchlist-placeholder")
 
 // On "remove" click, remove the target movie from the watchlist array. 
 // If the watchlist still has movies in the array, render the movies and save the array without the target movie to local storage.

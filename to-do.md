@@ -1,2 +1,0 @@
-- Add media query for desktop monitors
-- Clean up code
