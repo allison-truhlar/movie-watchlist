@@ -1,5 +1,7 @@
 import { renderHtml } from "./renderHtml.js"
 
+const apiKey = "28fc8eca"
+
 localStorage.clear()
 let searchResultArray = []
 let myWatchlist = 
@@ -13,7 +15,7 @@ const searchResultSection = document.getElementById("search-result-section")
 // Otherwise, display placeholder text for no search results.
 searchBtn.addEventListener("click", e =>{
     e.preventDefault()
-    fetch(`https://www.omdbapi.com/?apikey=28fc8eca&s=${searchInput.value}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput.value}`)
         .then(res => res.json())
         .then(movies => {
             const movieIds = movies.Search.map(movie =>{
@@ -51,7 +53,7 @@ searchResultSection.addEventListener("click", e => {
 // Function to fetch movies from a search in the Open Movie Database API
 async function searchMovies(movieIds){
         searchResultArray = await Promise.all(movieIds.map(async id => {
-            const res = await fetch(`https://www.omdbapi.com/?apikey=28fc8eca&i=${id}`)
+            const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
             return res.json()      
         }))     
         renderHtml(searchResultArray, searchResultSection, true)       
